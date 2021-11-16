@@ -117,3 +117,63 @@ data "azurerm_key_vault_secret" "sec_storage_id" {
   name         = "sec-storage-id"
   key_vault_id = module.key_vault.id
 }
+
+data "azurerm_key_vault_secret" "postgres-connection-url" {
+  name         = format("%s-%s", "postgres-connection-url", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "postgres-server-admin" {
+  name         = format("%s-%s", "postgres-server-admin", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "postgres-server-password" {
+  name         = format("%s-%s", "postgres-server-password", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "address-space" {
+  name         = format("%s-%s", "address-space", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "subnet-address-space" {
+  name         = format("%s-%s", "subnet-address-space", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "endpointsubnet-address-space" {
+  name         = format("%s-%s", "endpointsubnet-address-space", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "ip-restrictions-pda" {
+  name         = format("%s-%s", "ip-restrictions-pda", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "backend-address-pool-ip" {
+  name         = format("%s-%s", "backend-address-pool-ip", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "appgw-subnet-address-space" {
+  name         = format("%s-%s", "appgw-subnet-address-space", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "appgw-private-ip-address" {
+  name         = format("%s-%s", "appgw-private-ip-address", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "apim-public-ip" {
+  name         = format("%s-%s", "apim-public-ip", var.environment)
+  key_vault_id = module.key_vault.id.id
+}
+
+data "azurerm_key_vault_secret" "java-options" {
+  name         = "java-options"
+  key_vault_id = data.azurerm_key_vault.keyvault.id
+}
