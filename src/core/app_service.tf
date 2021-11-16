@@ -1,5 +1,5 @@
 module "web_app" {
-  source = "git::https://github.com/fabio-felici-sia/azurerm.git//app_service?ref=app-service-update"
+  source = "git::https://github.com/pagopa/azurerm.git//app_service?ref=v1.0.86"
 
   name = format("%s-%s", var.name, var.environment)
 
