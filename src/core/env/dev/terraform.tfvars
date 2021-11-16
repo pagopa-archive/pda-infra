@@ -39,6 +39,10 @@ app_command_line = "/home/site/deployments/tools/startup_script.sh"
 #########################################################
 spring_config_location = "file:///home/site/appconfig/application-ti.yml"
 
+## JAVA OPTS
+#########################################################
+java_opts = "-Dfile.encoding=UTF-8 -Ddandelion.profile.active=prod"
+
 ## SYSTEM ENCODING
 #########################################################
 system_encoding = "C.UTF-8"

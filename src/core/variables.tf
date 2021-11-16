@@ -130,6 +130,14 @@ variable "spring_config_location" {
   description = "Spring config location"
 }
 
+## JAVA OPTS
+#########################################################
+## Java options
+variable "java_opts" {
+  type        = string
+  description = "Set encoding UTF-8"
+}
+
 ## SYSTEM ENCODING
 #########################################################
 ## SET C.UTF-8

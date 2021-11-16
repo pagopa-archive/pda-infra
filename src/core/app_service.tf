@@ -17,7 +17,7 @@ module "web_app" {
   linux_fx_version = "${var.runtime_name}|${var.runtime_version}"
 
   app_settings = {
-    JAVA_OPTS                          = data.azurerm_key_vault_secret.java-options.value
+    JAVA_OPTS                          = var.java_opts
     LANG                               = var.system_encoding
     POSTGRES_CONNECTION_URL            = data.azurerm_key_vault_secret.postgres-connection-url.value
     POSTGRES_SERVER_ADMIN_FULL_NAME    = data.azurerm_key_vault_secret.postgres-server-admin.value
